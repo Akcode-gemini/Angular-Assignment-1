@@ -12,7 +12,7 @@
     <div class="col-12">
       <p>Button is clicked {{ count }} times</p>
     </div>
-    <div class="col-12">
+    <div class="col-12 mb-3">
       <input
         type="text"
         [(ngModel)]="name"
@@ -20,9 +20,27 @@
       />&nbsp;
       <button (click)="Add()" class="btn btn-info">Add</button>
     </div>
-    <li class="li" *ngFor="let items of nameList; let i = index">
+    <!-- <li class="li" *ngFor="let items of nameList; let i = index">
       <p [ngClass]="(i + 1) % 5 == 0 ? 'blue' : ''">{{ items.text }}</p>
-    </li>
-  </div>
+    </li> -->
+    </div>
+    <div class="table-responsive ">
+    <table  [hidden]="!f" class="table table-bordered border-dark">
+      <thead>
+      <tr>
+        <th>{{s}}</th>
+        <th>{{tx}}</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let items of nameList; let i = index" [ngClass]="(i + 1) % 5 == 0 ? 'blue' : ''" >
+        <td>{{i+1}}</td>
+        <td>{{items.text}}</td>
+      </tr>
+      </tbody>
+
+    </table>
+    </div>
+
 </div>
 <router-outlet></router-outlet>

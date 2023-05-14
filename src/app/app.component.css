@@ -1,5 +1,6 @@
 .blue {
-  color: #0000ff;
+  background-color: #0000ff;
+  color:white;
 }
 .li {
   list-style-type: none;
@@ -8,6 +9,6 @@
   width: 50%;
 } */
 .colo {
-  background-color: lightcyan;
+  background-color:lavender;
   width: 50%;
 }

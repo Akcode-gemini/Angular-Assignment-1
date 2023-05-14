@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular Assignment 1';
   display = false;
+  f=false;
   count = 0;
+  tx='';
+  s='';
   name = '';
   nameList: { text: string }[] = [];
   onClick() {
@@ -21,6 +24,9 @@ export class AppComponent {
     if (this.name) {
       this.nameList.push({ text: this.name });
       this.name = '';
+      this.f=true;
+      this.tx="Text";
+      this.s="S.No.";
     }
   }
 }
